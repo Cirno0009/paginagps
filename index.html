@@ -1,220 +1,72 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Administación Módulos GPS</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 20px auto;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        .module {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .module:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        .module h2 {
-            color: #007bff;
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-        .module a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        .module a:hover {
-            color: #0056b3;
-        }
-    </style>
+    <title>Monitoreo de Basureos Inteligentes</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Panel de Administación de Tachos</h1>
-        <div class="grid">
+    <header>
+        <h1>Monitoreo de Basureos Inteligentes - Distrito de Magisterio</h1>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Mapa</a>
+            <a href="#">Reportes</a>
+            <a href="#">Configuración</a>
+            <a href="#">Ayuda</a>
+            <a href="#">Salir</a>
+        </nav>
+    </header>
 
-            <div class="module">
-                <h2>Tacho 1</h2>
-                <p><a href="https://beta.find.apple.com/item?i=CF7FBDA7-13E9-4ED9-9587-AA85702FC6D0#t:txS/4rWnE+PxUjukTUJY71UtAY1VMuCyf3X9otuPrVo=,k:WplNyiDfBYt+iWaCxSgYr0GDBZqkZkw/GI2t/ZpVMVM=" target="_blank"> Tracking Portal</a></p>
+    <div class="mapa">
+        <img src="Mapa.png" alt="Mapa">
+        <input type="text" placeholder="Buscar">
+    </div>
+
+    <div class="filtros">
+        <button>Todos</button>
+        <button>Operativo</button>
+        <button>Con Alarma</button>
+        <button>Desconectado</button>
+    </div>
+
+    <div class="informacion">
+        <div class="info-grid">
+            <div class="card">
+                <h2>Basurero más cercano:</h2>
+                <p>Av. La Cultura 123</p>
             </div>
-    
-            <div class="module">
-                <h2>Tacho 2</h2>
-                <p><a href="https://gps-tracking-vendor.com/module2" target="_blank"> Tracking Portal</a></p>
+            <div class="card">
+                <h2>Último movimiento:</h2>
+                <p>Hace 2 minutos, Calle Mariscal Gamarra</p>
             </div>
-    
-            <div class="module">
-                <h2>Tacho 3</h2>
-                <p><a href="https://gps-tracking-vendor.com/module3" target="_blank"> Tracking Portal</a></p>
+            <div class="card">
+                <h2>Basurero más lleno:</h2>
+                <p>Av. El Sol 456, 75% lleno</p>
             </div>
-    
-            <div class="module">
-                <h2>Tacho 4</h2>
-                <p><a href="https://gps-tracking-vendor.com/module4" target="_blank"> Tracking Portal</a></p>
+            <div class="card">
+                <h2>Total de basureros dispobles:</h2>
+                <p>29 en total - 1 en mantenimiento</p>
             </div>
-    
-            <div class="module">
-                <h2>Tacho 5</h2>
-                <p><a href="https://gps-tracking-vendor.com/module5" target="_blank"> Tracking Portal</a></p>
+        </div>
+
+        <div class="graficas">
+            <div class="grafica">
+                <h2>Nivel de Basura Promedio</h2>
+                <p>68% Últimas 24 horas +5%</p>
+                <img src="grafica1.png" alt="Gráfica 1">
             </div>
-    
-            <div class="module">
-                <h2>Tacho 6</h2>
-                <p><a href="https://gps-tracking-vendor.com/module6" target="_blank"> Tracking Portal</a></p>
+            <div class="grafica">
+                <h2>Alertas por Hora</h2>
+                <p>15 alertas Hoy -3%</p>
+                <img src="grafica2.png" alt="Gráfica 2">
             </div>
-    
-            <div class="module">
-                <h2>Tacho 7</h2>
-                <p><a href="https://gps-tracking-vendor.com/module7" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 8</h2>
-                <p><a href="https://gps-tracking-vendor.com/module8" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 9</h2>
-                <p><a href="https://gps-tracking-vendor.com/module9" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 10</h2>
-                <p><a href="https://gps-tracking-vendor.com/module10" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 11</h2>
-                <p><a href="https://gps-tracking-vendor.com/module11" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 12</h2>
-                <p><a href="https://gps-tracking-vendor.com/module12" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 13</h2>
-                <p><a href="https://gps-tracking-vendor.com/module13" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 14</h2>
-                <p><a href="https://gps-tracking-vendor.com/module14" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 15</h2>
-                <p><a href="https://gps-tracking-vendor.com/module15" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 16</h2>
-                <p><a href="https://gps-tracking-vendor.com/module16" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 17</h2>
-                <p><a href="https://gps-tracking-vendor.com/module17" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 18</h2>
-                <p><a href="https://gps-tracking-vendor.com/module18" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 19</h2>
-                <p><a href="https://gps-tracking-vendor.com/module19" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 20</h2>
-                <p><a href="https://gps-tracking-vendor.com/module20" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 21</h2>
-                <p><a href="https://gps-tracking-vendor.com/module21" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 22</h2>
-                <p><a href="https://gps-tracking-vendor.com/module22" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 23</h2>
-                <p><a href="https://gps-tracking-vendor.com/module23" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 24</h2>
-                <p><a href="https://gps-tracking-vendor.com/module24" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 25</h2>
-                <p><a href="https://gps-tracking-vendor.com/module25" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 26</h2>
-                <p><a href="https://gps-tracking-vendor.com/module26" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 27</h2>
-                <p><a href="https://gps-tracking-vendor.com/module27" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 28</h2>
-                <p><a href="https://gps-tracking-vendor.com/module28" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 29</h2>
-                <p><a href="https://gps-tracking-vendor.com/module29" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
-            <div class="module">
-                <h2>Tacho 30</h2>
-                <p><a href="https://gps-tracking-vendor.com/module30" target="_blank"> Tracking Portal</a></p>
-            </div>
-    
         </div>
     </div>
+
+    <footer>
+        Monitoreo de Basureos Inteligentes - GianWorks - 2023-2024
+    </footer>
 </body>
 </html>
